@@ -1,0 +1,17 @@
+Run the Hub
+Hub - The hub is the central point where you load your tests into.
+There should only be one hub in a grid.
+
+http://www.seleniumhq.org/download/
+ java -jar selenium-server-standalone-2.30.0.jar -role hub
+
+http://localhost:4444/grid/console
+
+Run the Node
+
+Nodes-Nodes are the Selenium instances that will execute the tests that you loaded on the hub.
+There can be one or more nodes in a grid.
+Nodes can be launched on multiple machines with different platforms and browsers.
+The machines running the nodes need not be the same platform as that of the hub.
+
+java –jar  selenium-server-standalone-2.44.0.jar –role node –hub  http://192.168.1.6:4444/grid/register -browser browserName=firefox -port 5555
